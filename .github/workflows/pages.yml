@@ -2,7 +2,7 @@ name: Deploy GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [main, voltakyy-mobile-dodge-game]
   workflow_dispatch:
 
 permissions:
