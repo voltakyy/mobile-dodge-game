@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#071311">
+    <meta name="description" content="Slip between the falling sparks, collect light, and see how long you can last.">
+    <title>Night Shift — Neon Dodge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topbar">
+        <a class="wordmark" href="#" aria-label="Night Shift home"><span class="wordmark-mark" aria-hidden="true">✳</span><span>NIGHT<span class="wordmark-light">SHIFT</span></span></a>
+        <div class="topbar-note"><span class="live-dot"></span> ARCADE MODE <span class="note-divider">/</span> 01</div>
+      </header>
+      <section class="game-layout" aria-label="Night Shift arcade game">
+        <div class="intro">
+          <p class="eyebrow"><span>01</span> &nbsp; THE LATE-NIGHT RUN</p>
+          <h1>Keep the<br><span>light alive.</span></h1>
+          <p class="intro-copy">A quiet sky. A little too much falling debris. You know what to do.</p>
+          <div class="how-to">
+            <p class="eyebrow">HOW TO PLAY</p>
+            <div class="instruction-row"><span class="key-group" aria-label="A and D keys"><kbd>A</kbd><kbd>D</kbd></span><span>or <kbd>←</kbd><kbd>→</kbd> to move</span></div>
+            <div class="instruction-row"><span class="touch-icon" aria-hidden="true"><span></span></span><span>Tap the arrows on your screen</span></div>
+            <div class="instruction-row"><span class="orb-swatch" aria-hidden="true"></span><span>Collect light. Dodge the sparks.</span></div>
+          </div>
+          <div class="personal-best"><span class="best-icon" aria-hidden="true">↗</span><span><span class="best-label">PERSONAL BEST</span><strong id="best-score">00000</strong></span></div>
+        </div>
+        <div class="cabinet">
+          <div class="cabinet-top"><span class="cabinet-label"><span class="live-dot"></span> LIVE FEED</span><span class="cabinet-id">Nº 008 — NIGHT RUN</span></div>
+          <div class="screen-wrap">
+            <canvas id="game" aria-label="Game area. Move the light ship between three lanes to dodge falling sparks and collect glowing orbs." tabindex="0"></canvas>
+            <div class="screen-vignette" aria-hidden="true"></div>
+            <section class="game-overlay" id="overlay" aria-live="polite">
+              <div class="overlay-content">
+                <span class="overlay-kicker" id="overlay-kicker">YOUR SHIFT STARTS NOW</span>
+                <h2 id="overlay-title">Ready when<br>you are.</h2>
+                <p id="overlay-copy">Dodge the sparks. Catch a little light.</p>
+                <button class="play-button" id="play-button" type="button"><span id="button-label">Start the run</span><span class="button-arrow" aria-hidden="true">↗</span></button>
+                <span class="overlay-hint" id="overlay-hint">PRESS ENTER OR TAP TO BEGIN</span>
+              </div>
+            </section>
+          </div>
+          <div class="hud">
+            <div class="hud-stat"><span class="hud-label">DISTANCE</span><strong id="score">00000</strong></div>
+            <div class="hud-center"><span class="hud-label">HULL</span><div class="life-pips" id="lives" aria-label="3 lives remaining"><span class="life-pip"></span><span class="life-pip"></span><span class="life-pip"></span></div></div>
+            <div class="hud-stat hud-stat-right"><span class="hud-label">LIGHT CAUGHT</span><strong><span class="spark-icon">✳</span> <span id="collected">00</span></strong></div>
+          </div>
+          <div class="mobile-controls" aria-label="Movement controls">
+            <button type="button" class="move-button" id="left-button" aria-label="Move left"><span>←</span><small>LEFT</small></button>
+            <span class="controls-caption">MOVE</span>
+            <button type="button" class="move-button" id="right-button" aria-label="Move right"><span>→</span><small>RIGHT</small></button>
+          </div>
+        </div>
+      </section>
+      <footer class="footer"><span>STAY SHARP <span class="footer-dot">✳</span> KEEP GLOWING</span><span class="footer-right">A TINY ARCADE FOR YOUR BIG NIGHT</span></footer>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
